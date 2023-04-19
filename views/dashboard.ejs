@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Fontawesome  link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md header fixed-top ps-4 pt-1 p-0">
+        <div class="container-fluid p-0">
+            <a href="" class="navbar-brand">
+                <!--Desktop logo-->
+                <a href="dashboard.html">
+                    <img src="image/learn.jpg" width="120px" class="desk_logo">
+                </a>
+                <!--Mobile logo-->
+                <a href="dashboard.html">
+                    <img src="image/learn.jpg" class="mob_logo" width="120px">
+                </a>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#pn">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="pn">
+                <ul class="navbar-nav ms-auto text-uppercase">
+                    <li><a href="dashboard.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="logout.html" class="nav-link">Logout</a></li>
+                    <li><a href="#" class="nav-link user" data-bs-toggle="modal" data-bs-target="#aa">Rohit</a></li>
+                </ul>
+                <img src="image/learn.jpg" width="100px" height="100px" alt="...." class="me-3">
+            </div>
+
+        </div>
+        <!--container-fluid end -->
+    </nav> <!-- Navbar -->
+
+    <!-- ======================================= -->
+    <!--slider div start-->
+    <div class="carousel slide dashpage" data-bs-ride="carousel" id="a">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="image/learn.jpg" class="w-100 " height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/learn.jpg" class="w-100 " height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/learn.jpg" class="w-100 " height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/learn.jpg" class="w-100 " height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/learn.jpg" class="w-100 " height="400px" alt="...">
+            </div>
+        </div>
+        <!--carousel-inner-->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!--slider div end-->
+    <!-- ================================================================ -->
+
+    <div class="container mb-5 text-center">
+        <h1 class="course_heading mt-5">Hello Rohit
+        </h1>
+        <h2 class="course_heading my-3">Register Your Course</h2>
+        <p class="course_para text-center mb-5">Course Registration means the official recording of a student's name to
+            study a course or courses.</p>
+        <div class="row">
+
+            <div class="col-md-4 mb-5">
+                <div class="card card1">
+                    <img class="card-img-top" height="200px" width="300px" src="image/learn.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ">B.Tech</h5>
+                        <p class="card-text">B.Tech is a professional undergraduate engineering degree</p>
+
+                        <a href="" class="btn cors">Register</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card card2">
+                    <img class="card-img-top " height="200px!important" width="300px!important" src="image/learn.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ">BCA</h5>
+                        <p class="card-text">BCA is a three-year Bachelor's Degree in Computer Application </p>
+
+                        <a href="" class="btn cors">Register</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card card3">
+                    <img class="card-img-top " height="200px" width="300px" src="image/learn.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ">MCA</h5>
+                        <p class="card-text">MCA is a professional post-graduation degree in computer science</p>
+
+                        <a href="" class="btn cors">Register</a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer Section start -->
+    <div class="container-fluid p-0 footer pt-4">
+        <footer class="text-white text-center text-lg-start">
+            <!-- Grid container -->
+            <div class="container p-4">
+                <!--Grid row-->
+                <div class="row mt-4">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4 block_title"><span>ABOUT US</span></h5>
+
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+
+                        <div class="mt-4">
+
+                            <a type="button" class="btn btn-floating  btn-lg" style="background: #35b9dd; color:white;"
+                                href="https://www.facebook.com/harshit.sahu.5648/"><i class="fab fa-facebook-f"></i></a>
+                            <!-- Facebook -->
+                            <a type="button" class="btn btn-floating  btn-lg"
+                                style="background: #35b9dd; color:white;"><i class="fa-brands fa-instagram"></i></a>
+                            <!-- Instagram -->
+                            <a type="button" class="btn btn-floating  btn-lg" style="background: #35b9dd; color:white;"
+                                href="https://twitter.com/Harshit64946181"><i class="fab fa-twitter"></i></a>
+                            <!-- Twitter -->
+                            <a type="button" class="btn btn-floating  btn-lg" style="background: #35b9dd; color:white;"
+                                href="https://www.linkedin.com/in/himanshu-sahu-b9463a17a/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                            <!-- Linkedin -->
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0 ">
+                        <h5 class="text-uppercase mb-4 pb-1 block_title"><span>CONTACT</span></h5>
+
+                        <ul class="fa-ul" style="margin-left: 1.65em;">
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Gole ka mandir,
+                                    Station road</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                                    class="ms-2">admissionmits@gmail.com</span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+91 8871482503
+                                </span>
+                            </li>
+                            <li class="mb-3">
+                                <span class="fa-li"><i class="fas fa-print"></i></span><span class="ms-2">+91
+                                    8871482503</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase mb-4 block_title"><span>Opening hours</span></h5>
+
+                        <table class="table text-center text-white">
+                            <tbody class="font-weight-normal">
+                                <tr>
+                                    <td>Mon - Thu:</td>
+                                    <td>8am - 9pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Fri - Sat:</td>
+                                    <td>8am - 1pm</td>
+                                </tr>
+                                <tr>
+                                    <td>Sunday:</td>
+                                    <td>9am - 10pm</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright section -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:
+                <a class="text-white" href="">Rohit Rishishwar</a>
+            </div><!-- Copyright -->
+        </footer>
+
+    </div><!-- Container-fluid end -->
+    <!-- Footer Section end -->
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
