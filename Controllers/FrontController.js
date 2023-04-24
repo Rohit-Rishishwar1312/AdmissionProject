@@ -1,3 +1,5 @@
+const UserModal=require('../modals/User')
+
 class FrontController{
    static login=async(req,res)=>{
     try{
