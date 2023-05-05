@@ -3,8 +3,8 @@ const app = express()
 const port = 3000
 const web= require('./routes/web')
 const connectdb= require('./DB/connectdb')
-
-
+//to encode
+app.use(express.urlencoded({ extended: true }));
 //connectdb
 connectdb()
 //for static files

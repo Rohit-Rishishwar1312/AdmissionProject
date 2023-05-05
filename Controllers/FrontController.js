@@ -29,6 +29,21 @@ class FrontController{
         console.log(error)
     }
    }
+   static userinsert=async(req,res)=>{
+    try{
+     //console.log(req.body)
+     const result=new UserModal({
+      name:req.body.name,
+      email:req.body.email,
+      password:req.body.password
+     })
+     await result.save()
+     res.redirect('/')
+
+    }catch(error){
+     console.log(error)
+    }
+   }
 }
 
 module.exports=FrontController
