@@ -17,6 +17,10 @@ route.post('/userinsert',FrontController.userinsert)
 //CourseController
 route.post('/courseinsert',CourseController.courseinsert)
 route.get('/coursedisplay',CourseController.display)
+route.get('/view/:id',CourseController.view)
+route.get('/edit/:id',CourseController.edit)
+route.post('/courseupdate/:id',CourseController.update)
+
 
 
 

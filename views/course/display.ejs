@@ -1,9 +1,7 @@
 <%- include('../header.ejs') %>
 
-<h1 class="mt-5">Display Course</h1>
-
 <div class="container mt-5">
-    <table class="table table-bordered">
+    <table class="table table-bordered table-striped tabl">
         <tr>
             <th>Id</th>
             <th>Name</th>
@@ -11,17 +9,21 @@
             <th>Phone</th>
             <th>Action</th>
         </tr>
-        <tr>
-            <td>1</td>
-            <td>rohit</td>
-            <td>rohit@gmail.com</td>
-            <td>78878787</td>
-            <td>
-                <a href="" class="btn btn-info">view</a>
-                <a href="" class="btn btn-success">edit</a>
-                <a href="" class="btn btn-danger">delete</a>
-            </td>
-        </tr>
+        <% d.forEach((item)=>{ %>
+            <tr>
+                <td><%= item._id %></td>
+                <td><%= item.name %></td>
+                <td><%= item.email %></td>
+                <td><%= item.phone %></td>
+                <td>
+                    <a href="/view/<%= item._id %>" class="btn btn-info">view</a>
+                    <a href="/edit/<%= item._id %>" class="btn btn-success">edit</a>
+                    <a href="" class="btn btn-danger">delete</a>
+                </td>
+            </tr>
+
+        <% }) %>
+        
     </table>
 </div>
 

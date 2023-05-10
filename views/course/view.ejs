@@ -1,0 +1,31 @@
+<%- include('../header.ejs') %>
+
+<div class="container mt-5">
+    <table class="table table-bordered table-striped tabl">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Tenth</th>
+            <th>Twelth</th>
+            <th>Course</th>
+            
+        </tr>
+            <tr>
+                <td><%= v._id %></td>
+                <td><%= v.name %></td>
+                <td><%= v.email %></td>
+                <td><%= v.phone %></td>
+                <td><%= v.tenth %></td>
+                <td><%= v.twelth %></td>
+                <td><%= v.course %></td>
+                
+            </tr>
+
+        
+        
+    </table>
+</div>
+
+<%- include('../footer.ejs') %>

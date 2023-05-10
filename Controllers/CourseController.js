@@ -28,6 +28,38 @@ static display=async(req,res)=>{
     console.log(error)
   }
 }
+static view=async(req,res)=>{
+  try{
+    //console.log(req.params.id)
+    const data=await CourseModal.findById(req.params.id)
+    //console.log(data)
+    res.render('course/view',{v:data})
+  }catch(error){
+    console.log(error)
+  }
+}
+static edit=async(req,res)=>{
+  try{
+    //console.log(req.params.id)
+    const data=await CourseModal.findById(req.params.id)
+    //console.log(data)
+    res.render('course/edit',{e:data})
+  }catch(error){
+    console.log(error)
+  }
+}
+static update=async(req,res)=>{
+  try{
+    console.log(req.params.id)
+    console.log(req.body)
+    //const data=await CourseModal.findById(req.params.id)
+    //console.log(data)
+    //res.render('course/edit',{e:data})
+  }catch(error){
+    console.log(error)
+  }
+}
+
   
 }
 
