@@ -50,11 +50,27 @@ static edit=async(req,res)=>{
 }
 static update=async(req,res)=>{
   try{
-    console.log(req.params.id)
-    console.log(req.body)
-    //const data=await CourseModal.findById(req.params.id)
-    //console.log(data)
-    //res.render('course/edit',{e:data})
+    //console.log(req.params.id)
+    //console.log(req.body)
+    const data=await CourseModal.findByIdAndUpdate(req.params.id,{
+      name:req.body.name,
+      email:req.body.email,
+      phone:req.body.phone,
+      tenth:req.body.tenth,
+      twelth:req.body.twelth,
+      course:req.body.course,
+    })
+    res.redirect('/coursedisplay')//redirect route path ata hai
+  }catch(error){
+    console.log(error)
+  }
+}
+
+static delete=async(req,res)=>{
+  try{
+    //console.log(req.params.id)
+    const data=await CourseModal.findByIdAndDelete(req.params.id)
+    res.redirect('/coursedisplay')
   }catch(error){
     console.log(error)
   }

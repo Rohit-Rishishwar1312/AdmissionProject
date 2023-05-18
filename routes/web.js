@@ -20,7 +20,7 @@ route.get('/coursedisplay',CourseController.display)
 route.get('/view/:id',CourseController.view)
 route.get('/edit/:id',CourseController.edit)
 route.post('/courseupdate/:id',CourseController.update)
-
+route.get('/delete/:id',CourseController.delete)
 
 
 
