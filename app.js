@@ -16,6 +16,10 @@ connectdb()
 const session = require('express-session')
 const flash = require('connect-flash');
 
+//cookies
+const cookieParser = require('cookie-parser');
+app.use(cookieParser())
+
 //messages
 app.use(session({
     secret: 'secret',

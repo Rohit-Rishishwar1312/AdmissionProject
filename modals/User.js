@@ -13,7 +13,17 @@ const Userschema=new mongoose.Schema({
      password: {
         type:String,
         required:true 
-     }
+     },
+     image: {
+      public_id: {
+        type: String,
+        required: true,
+      },
+      url: {
+        type: String,
+        required: true,
+      }
+    }
 },{timestamps:true})
 //create collection
 const UserModal=mongoose.model('user',Userschema)

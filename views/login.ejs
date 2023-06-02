@@ -19,7 +19,7 @@
     <nav class="navbar navbar-light bg-success">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="/image/learn.jpg" alt="" width="40" height="24" class="d-inline-block align-text-right">
+            <img src="/image/logo2.jpg" alt="" width="40" height="24" class="d-inline-block align-text-right rounded-circle">
             Student Course Enrollment System
           </a>
         </div>
@@ -33,16 +33,21 @@
               <div class="border border-3 border-primary"></div>
               <div class="card bg-white">
                 <div class="card-body p-5">
-                  <form class="mb-3 mt-md-4">
+                  <form class="mb-3 mt-md-4" action="/verifylogin" method="post">
                     <h2 class="fw-bold mb-2 text-uppercase ">Student Course Registration System</h2>
-                    <p class=" mb-5">Please enter your login and password!</p>
+                    <% if(message.length>0){ %>
+                      <div class="alert alert-danger">
+                         <%= message %> 
+                      </div>
+
+                    <% } %>
                     <div class="mb-3">
                       <label for="email" class="form-label ">Email address</label>
-                      <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                      <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
                     </div>
                     <div class="mb-3">
                       <label for="password" class="form-label ">Password</label>
-                      <input type="password" class="form-control" id="password" placeholder="*******">
+                      <input type="password" name="password" class="form-control" id="password" placeholder="*******">
                     </div>
                     <p class="small"><a class="text-primary" href="">Forgot password?</a></p>
                     <div class="d-grid">

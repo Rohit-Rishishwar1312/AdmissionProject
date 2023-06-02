@@ -25,6 +25,10 @@ const Courseschema=new mongoose.Schema({
      course: {
         type:String,
         required:true 
+     },
+     userid: {
+      type: String,
+      required:true
      }
 },{timestamps:true})
 //create collection
