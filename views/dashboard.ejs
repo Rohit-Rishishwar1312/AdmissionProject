@@ -54,8 +54,12 @@
                     <div class="card-body">
                         <h5 class="card-title ">B.Tech</h5>
                         <p class="card-text">B.Tech is a professional undergraduate engineering degree</p>
-
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#btech" class="btn cors">Register</a>
+                        <% if(b){ %>
+                            <a href="/coursedisplay" class="btn btn-success cors">Display</a>
+                        <% }else{ %>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#btech" class="btn cors">Register</a>
+                        <% } %>
+                        
 
                     </div>
                 </div>
@@ -68,8 +72,12 @@
                     <div class="card-body">
                         <h5 class="card-title ">BCA</h5>
                         <p class="card-text">BCA is a three-year Bachelor's Degree in Computer Application </p>
-
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#bca" class="btn cors">Register</a>
+                       
+                        <% if(bca){ %>
+                            <a href="/coursedisplay" class="btn btn-success cors">Display</a>
+                        <% }else{ %>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#bca" class="btn cors">Register</a>
+                        <% } %>
 
                     </div>
                 </div>
@@ -81,8 +89,12 @@
                     <div class="card-body">
                         <h5 class="card-title ">MCA</h5>
                         <p class="card-text">MCA is a professional post-graduation degree in computer science</p>
-
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#mca" class="btn cors">Register</a>
+                        
+                        <% if(mca){ %>
+                            <a href="/coursedisplay" class="btn btn-success cors">Display</a>
+                        <% }else{ %>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#mca" class="btn cors">Register</a>
+                        <% } %>
 
                     </div>
                 </div>
@@ -124,6 +136,98 @@
             <div class="mb-3">
                 <label>Course</label>
                 <input type="text" name="course" value="Btech" class="form-control" readonly required>  
+            </div>
+            <button type="submit">Submit</button>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--BCA Modal -->
+<div class="modal fade" id="bca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">BTECH Registration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/courseinsert" method="post">
+            <div class="mb-3">
+                <label>Name</label>
+                <input type="text" value="<%= n %>" name="name" class="form-control">  
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" value="<%= e %>" name="email" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>Phone No</label>
+                <input type="number" name="phone" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>10th Number</label>
+                <input type="number" name="tenth" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>12th Number</label>
+                <input type="number" name="twelth" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>Course</label>
+                <input type="text" name="course" value="Bca" class="form-control" readonly required>  
+            </div>
+            <button type="submit">Submit</button>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--MCA Modal -->
+<div class="modal fade" id="mca" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">BTECH Registration</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/courseinsert" method="post">
+            <div class="mb-3">
+                <label>Name</label>
+                <input type="text" value="<%= n %>" name="name" class="form-control">  
+            </div>
+            <div class="mb-3">
+                <label>Email</label>
+                <input type="email" value="<%= e %>" name="email" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>Phone No</label>
+                <input type="number" name="phone" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>10th Number</label>
+                <input type="number" name="tenth" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>12th Number</label>
+                <input type="number" name="twelth" class="form-control" required>  
+            </div>
+            <div class="mb-3">
+                <label>Course</label>
+                <input type="text" name="course" value="Mca" class="form-control" readonly required>  
             </div>
             <button type="submit">Submit</button>
 

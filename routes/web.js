@@ -13,7 +13,9 @@ route.get('/about',CheckUserAuth,FrontController.about)
 route.get('/contact',CheckUserAuth,FrontController.contact)
 route.post('/verifylogin',FrontController.verifylogin)
 route.get('/logout',FrontController.logout)
-
+route.get('/profile',CheckUserAuth,FrontController.profile)
+route.post('/changepassword',CheckUserAuth,FrontController.changepassword)
+route.post('/updateprofile',CheckUserAuth,FrontController.updateprofile)
 //route
 route.post('/userinsert',FrontController.userinsert)
 

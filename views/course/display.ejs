@@ -2,19 +2,22 @@
 
 <div class="container mt-5">
     <table class="table table-bordered table-striped tabl">
+        
+            <th colspan="5" class="text-center text-black">Courses you have enrolled</th>
         <tr>
             <th>Id</th>
             <th>Name</th>
             <th>Email</th>
-            <th>Phone</th>
+            <th>Course</th>
             <th>Action</th>
         </tr>
+        <% let number=1 %>
         <% d.forEach((item)=>{ %>
             <tr>
-                <td><%= item._id %></td>
+                <td><%= number++ %></td>
                 <td><%= item.name %></td>
                 <td><%= item.email %></td>
-                <td><%= item.phone %></td>
+                <td><%= item.course %></td>
                 <td>
                     <a href="/view/<%= item._id %>" class="btn btn-info">view</a>
                     <a href="/edit/<%= item._id %>" class="btn btn-success">edit</a>
