@@ -1,0 +1,47 @@
+<%- include('./adminheader.ejs') %>
+
+<div class="container mt-5">
+    <table class="table table-bordered table-responsive table-striped tabl">
+
+        <th colspan="9" class="text-center text-black">User Contacted to Admin</th>
+        <tr>
+            <th>S.No</th>
+            <th>User Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Subject</th>
+            <th>Message</th>
+        </tr>
+        <% number=1 %>
+            <% d.forEach((item)=>{ %>
+                <tr>
+                    <td>
+                        <%= number++ %>
+                    </td>
+                    <td>
+                        <%= item.userid %>
+                    </td>
+                    <td>
+                        <%= item.name %>
+                    </td>
+                    <td>
+                        <%= item.email %>
+                    </td>
+                    <td>
+                        <%= item.subject %>
+                    </td>
+                    <td>
+                        <%= item.message %>
+                    </td>
+                </tr>
+
+                <% }) %>
+
+    </table>
+</div>
+
+
+
+
+
+<%- include('./adminfooter.ejs') %>

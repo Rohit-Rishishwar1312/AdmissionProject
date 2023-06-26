@@ -29,7 +29,15 @@ const Courseschema=new mongoose.Schema({
      userid: {
       type: String,
       required:true
+     },
+     status: {
+      type: String,
+      default: 'Pending'
+     },
+     comment: {
+      type: String
      }
+     
 },{timestamps:true})
 //create collection
 const CourseModal=mongoose.model('course',Courseschema)

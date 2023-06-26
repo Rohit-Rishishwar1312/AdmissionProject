@@ -1,0 +1,62 @@
+<%- include('./adminheader.ejs') %>
+
+    <div class="container mt-5">
+        <table class="table table-bordered table-responsive table-striped tabl">
+
+            <th colspan="9" class="text-center text-black">All Course Display For Admin</th>
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Status</th>
+                <th>Comment</th>
+                <th></th>
+                <th>Action</th>
+            </tr>
+            <% number=1 %>
+                <% d.forEach((item)=>{ %>
+                    <tr>
+                        <td>
+                            <%= number++ %>
+                        </td>
+                        <td>
+                            <%= item.name %>
+                        </td>
+                        <td>
+                            <%= item.email %>
+                        </td>
+                        <td>
+                            <%= item.course %>
+                        </td>
+                        <td>
+                            <%= item.status %>
+                        </td>
+                        <td>
+                            <form action="/updatestatus/<%= item._id %>" method="post">
+                                <textarea name="comment"></textarea>
+                                <input type="hidden" name="email" value="<%= item.email %>">
+                                <input type="hidden" name="name" value="<%= item.name %>">
+                                <input type="hidden" name="course" value="<%= item.course %>">
+                        </td>
+                        <td>
+                            <button type="submit" name="status" value="Approved" class="btn btn-success">Approved</button>
+                            <button type="submit" name="status" value="Reject" class="btn btn-danger">Reject</button>
+                            </form>
+                        </td>
+
+                        <td>
+                            <a href="/admin/course/view/<%= item._id %>" class="btn btn-info">view</a>
+                            <!--<a href="/edit/<%= item._id %>" class="btn btn-success">edit</a>-->
+                            <a href="/admin/course/delete/<%= item._id %>" class="btn btn-danger">delete</a>
+                        </td>
+                    </tr>
+
+                    <% }) %>
+
+        </table>
+    </div>
+
+
+
+    <%- include('./adminfooter.ejs') %>
