@@ -17,7 +17,7 @@ class CourseController{
         userid: _id
       })
       await data.save()
-      this.SendEmail(course,email)
+      //this.SendEmail(course,email)
       res.redirect('/coursedisplay')
     }catch(error){
      console.log(error)
@@ -84,32 +84,32 @@ static delete=async(req,res)=>{
   }
 }
 
-static SendEmail = async (course, email) => {
+// static SendEmail = async (course, email) => {
         
-   //console.log(course)
-   //console.log(email)
+//    //console.log(course)
+//    //console.log(email)
   
-  let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-          user: 'rishishwarrohit@gmail.com',
-          pass: 'apwecivzwbqpgrof'
-      },
-    });
+//   let transporter = nodemailer.createTransport({
+//       host: "smtp.gmail.com",
+//       port: 587,
+//       secure: false, // true for 465, false for other ports
+//       auth: {
+//           user: 'rishishwarrohit@gmail.com',
+//           pass: 'apwecivzwbqpgrof'
+//       },
+//     });
   
-    //send mail with defined transport object
-    let info = await transporter.sendMail({
-      from: '"rishishwarrohit@gmail.com" <rishishwarrohit@gmail.com>', // sender address
-      to: email, // list of receivers
-      subject: "Hello ✔", // Subject line
-      text: "Hello world?", // plain text body
-      html: `your course register successfully<b>${course}</b>`, // html body
-    });
+//     //send mail with defined transport object
+//     let info = await transporter.sendMail({
+//       from: '"rishishwarrohit@gmail.com" <rishishwarrohit@gmail.com>', // sender address
+//       to: email, // list of receivers
+//       subject: "Hello ✔", // Subject line
+//       text: "Hello world?", // plain text body
+//       html: `your course register successfully<b>${course}</b>`, // html body
+//     });
   
 
-}
+// }
 
 
   

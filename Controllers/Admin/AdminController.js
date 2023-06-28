@@ -46,37 +46,37 @@ class AdminController{
         comment:req.body.comment,
         status:req.body.status
       })
-      this.SendEmail(comment,status,course,name,email)
+      //this.SendEmail(comment,status,course,name,email)
       req.flash('success','Status updated successfully')
       res.redirect('/admin/display')
     }catch(error){
       console.log(error)
     }
   }
-  static SendEmail = async (comment,status,course,name,email) => {
+//   static SendEmail = async (comment,status,course,name,email) => {
         
-    console.log(comment,status,course,name,email)
-    // 1RHfz85p4XfEue4Juv
-    let transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: 'rishishwarrohit@gmail.com',
-            pass: 'apwecivzwbqpgrof'
-        },
-      });
+//     console.log(comment,status,course,name,email)
+//     // 1RHfz85p4XfEue4Juv
+//     let transporter = nodemailer.createTransport({
+//         host: "smtp.gmail.com",
+//         port: 587,
+//         secure: false, // true for 465, false for other ports
+//         auth: {
+//             user: 'rishishwarrohit@gmail.com',
+//             pass: 'apwecivzwbqpgrof'
+//         },
+//       });
     
-      // send mail with defined transport object
-      let info = await transporter.sendMail({
-        from: '"rishishwarrohit@gmail.com" <rishishwarrohit@gmail.com>', // sender address
-        to: email, // list of receivers
-        subject: "Hello ✔", // Subject line
-        text: "Hello world?", // plain text body
-        html: `${name} your ${course} course  ${status} successfully, <br><b>${comment}</b>`, // html body
-      });
+//       // send mail with defined transport object
+//       let info = await transporter.sendMail({
+//         from: '"rishishwarrohit@gmail.com" <rishishwarrohit@gmail.com>', // sender address
+//         to: email, // list of receivers
+//         subject: "Hello ✔", // Subject line
+//         text: "Hello world?", // plain text body
+//         html: `${name} your ${course} course  ${status} successfully, <br><b>${comment}</b>`, // html body
+//       });
     
 
-}
+// }
 }
 module.exports= AdminController
